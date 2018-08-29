@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>品类</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/flpl_style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<header class="navbar">
+    <ul class="o_h">
+        <li class="f_l w_15 menu_btn"><a href="#"><img src="images/list.png" alt=""/></a></li>
+        <li><a href="#">品类 <span></span></a></li>
+        <li><a href="#">品牌 <span></span></a></li>
+    </ul>
+</header>
+
+<div id="menu_smartphone" class="menu_mobile_app" align="left">
+    <nav id="menu" class="o_h">
+        <div class="menu_hd o_h">
+            <ul class="nav_list">
+                <li class="men"><a href="#">MEN <span></span></a></li>
+                <li class="women"><a href="#">WOMEN <span></span></a></li>
+            </ul>
+            <ul class="sub_list_men sub_list">
+                <li><a href="#">限定发售 <span>LIMITED-men</span></a></li>
+                <li><a href="#">潮流优选 <span>BLK-men</span></a></li>
+                <li><a href="#">激价 <span>SALE-men</span></a></li>
+                <li><a href="#">潮童 <span>KIDS-men</span></a></li>
+                <li><a href="#">创意生活 <span>LIFE STYLE-men</span></a></li>
+                <li><a href="#">YOHO!STORE</a></li>
+            </ul>
+            <ul class="sub_list_women sub_list">
+                <li><a href="#">限定发售 <span>LIMITED-girl</span></a></li>
+                <li><a href="#">潮流优选 <span>BLK-girl</span></a></li>
+                <li><a href="#">激价 <span>SALE-girl</span></a></li>
+                <li><a href="#">潮童 <span>KIDS-girl</span></a></li>
+                <li><a href="#">创意生活 <span>LIFE STYLE-girl</span></a></li>
+                <li><a href="#">YOHO!STORE</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".men").click(function(){
+                $(".sub_list_men").slideDown(400);
+                $(".sub_list_women").slideUp(400);
+            });
+            $(".women").click(function(){
+                $(".sub_list_women").slideDown(400);
+                $(".sub_list_men").slideUp(400);
+            });
+        })
+    </script>
+</div>
+
+<div id="grey_back">&nbsp;</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var isMenuOpen = false;
+
+        $('.menu_btn').click(function () {
+            if (isMenuOpen == false) {
+                $("#menu_smartphone").clearQueue().animate({
+                    left: '0px'
+                })
+                $("#grey_back").fadeIn('fast');
+                $(this).fadeOut(200);
+                $(".close").fadeIn(300);
+
+                isMenuOpen = true;
+            }
+        });
+        $('#grey_back').click(function () {
+            if (isMenuOpen == true) {
+                $("#menu_smartphone").clearQueue().animate({
+                    left: '-570px'
+                })
+                $("#page").clearQueue().animate({
+                    "margin-left": '0px'
+                })
+                $("#grey_back").fadeOut('fast');
+                $(this).fadeOut(200);
+                $(".menu_btn").fadeIn(300);
+
+                isMenuOpen = false;
+            }
+        });
+    });
+</script>
+
+<main class="o_h">
+    <nav>
+        <ul class="o_h">
+            <li><a href="#">MEN</a></li>
+            <li class="colo_000"><a href="#">WOMEN</a></li>
+            <li><a href="#">KIDS</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <ul>
+            <li class="colo_fff"><a href="#">上衣</a></li>
+            <li><a href="#">裤装</a></li>
+            <li><a href="#">鞋靴</a></li>
+            <li><a href="#">裙装</a></li>
+            <li><a href="#">包类</a></li>
+            <li><a href="#">服饰</a></li>
+            <li><a href="#">内衣|家居服</a></li>
+            <li><a href="#">美妆|个护</a></li>
+        </ul>
+    </aside>
+    <article>
+    <dl class="o_h">
+        <dt><span></span>热门推荐 <span></span></dt>
+        <dd><a href="#"><img src="images/flpl/list1.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/list2.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/list3.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/list4.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/list5.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/list6.jpg" alt=""/></a></dd>
+    </dl>
+    <dl class="o_h">
+        <dt><span></span>全部上衣<span></span></dt>
+        <dd><a href="#"><img src="images/flpl/qb_list1.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/qb_list2.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/qb_list3.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/qb_list4.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/qb_list5.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/qb_list6.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/qb_list7.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/qb_list8.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/qb_list9.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/qb_list10.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/qb_list11.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/qb_list12.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/qb_list13.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/qb_list14.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/qb_list15.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/qb_list16.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/qb_list17.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/qb_list18.jpg" alt=""/></a></dd>
+    </dl>
+    <dl class="o_h">
+        <dt><span></span>热门品牌<span></span></dt>
+        <dd><a href="#"><img src="images/flpl/pp_list1.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/pp_list2.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/pp_list3.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/pp_list4.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/pp_list5.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/pp_list6.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/pp_list7.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/pp_list8.jpg" alt=""/></a></dd>
+        <dd><a href="#"><img src="images/flpl/pp_list9.jpg" alt=""/></a></dd>
+    </dl>
+    </article>
+</main>
+    <footer>
+        <ul class="o_h">
+            <li><a href="index_content.html">首页</a></li>
+            <li class="Click"><a href="sub_flpl.html">分类</a></li>
+            <li><a href="#">逛</a></li>
+            <li><a href="sub_shop.html">购物车</a></li>
+            <li><a href="#">我的</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

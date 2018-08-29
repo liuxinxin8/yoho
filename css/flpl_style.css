@@ -1,0 +1,212 @@
+/*---------------------header----------------------------*/
+header{
+    background: #000;
+    height: 50px;
+}
+header ul{
+    padding: 0;
+}
+header ul li{
+    float: left;
+    width: 35%;
+    text-align: center;
+}
+header ul li:nth-of-type(1){
+    padding-top: 8px;
+}
+header ul li a{
+    color: #ffffff;
+    line-height: 48px;
+    height: 50px;
+    font-weight: 300;
+}
+header ul li:nth-of-type(2) a span{
+    display: block;
+    background: #ffffff;
+    height: 2px;
+    width: 70px;
+    margin: 0 auto;
+}
+header ul li a:hover span{
+    display: block;
+    background: #ffffff;
+    height: 2px;
+    width: 70px;
+    margin: 0 auto;
+}
+
+@media (min-width: 412px) {
+    header{
+        height: 60px;
+    }
+    header ul li:nth-of-type(1){
+        padding-top: 5px;
+    }
+    header ul li a{
+        line-height: 58px;
+        height: 60px;
+    }
+}
+@media (min-width: 768px) {
+    header{
+        height: 80px;
+    }
+    header ul li:nth-of-type(1){
+        padding-top:8px;
+    }
+    header ul li a{
+        line-height: 77px;
+        height: 80px;
+    }
+}
+/*----------------------main nav-----------------------------*/
+main nav{
+    position: fixed;
+    top: 50px;
+    width: 100%;
+}main nav li{
+    background: #fff;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    border-bottom: 1px solid #d6d6d6;
+}
+main nav li a{
+    margin-right: -2px;
+    color: #BABABA;
+    display: block;
+    background: url("../images/flpl/bor_r.jpg") no-repeat right center;
+}
+main nav li.colo_000 a{
+    color: #000;
+}
+main nav li a:hover{
+    color: #000;
+}
+@media (min-width: 412px) {
+    main nav{
+        top: 60px;
+    }main nav li{
+         height: 60px;
+         line-height: 60px;
+     }
+}
+@media (min-width: 768px) {
+    main nav{
+        top: 80px;
+    }main nav li{
+         height: 80px;
+         line-height: 80px;
+     }
+}
+/*-------------------main aside--------------------------*/
+main aside{
+    width: 30%;
+    position: fixed;
+    top: 100px;
+}
+main aside ul li{
+    width: 100%;
+    background: #eceeed;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+main aside ul li a{
+    display: block;
+    width: 100%;
+    color: #B4B4B4;
+}
+main aside ul .colo_fff a{
+    border-left: 3px solid #000;
+    background: #ffffff;
+    color: #000;
+}
+main aside ul a:hover{
+    border-left: 3px solid #000;
+    background: #ffffff;
+    color: #000;
+}
+@media (min-width: 412px) {
+    main aside{
+    top: 120px;
+}
+    main aside ul li{
+        height: 70px;
+        line-height: 70px;
+    }
+}
+@media (min-width: 768px) {
+    main aside{
+    top: 160px;
+}
+    main aside ul li{
+        height: 100px;
+        line-height: 100px;
+    }
+    main aside ul li a{
+        font-size: 20px;
+    }
+}
+/*--------------------main article---------------------------*/
+main article{
+    margin-top: 100px;
+    width: 70%;
+    float: right;
+    background: #ffffff;
+}
+main article dl{
+    padding-right: 10px;
+}
+main article dl dt{
+    text-align: center;
+    line-height: 50px;
+    font-size: 14px;
+}
+main article dl dt span{
+    display: inline-block;
+    position: relative;
+    top: -4px;
+    height: 1px;
+    width: 25px;
+    margin: 0 10px;
+    background: #000;
+}
+main article dl dd{
+    float: left;
+    width: 33.3%;
+    padding-left: 10px;
+}
+main article dl dd img{
+    width: 100%;
+}
+main article dl:nth-of-type(2) dd{
+    height: 110px;
+}
+
+@media (min-width: 412px) {
+    main article{
+    margin-top: 120px;
+}
+    main article dl:nth-of-type(2) dd{
+        height: 130px;
+    }
+}
+@media (min-width: 768px) {
+    main article{
+    margin-top: 160px;
+}
+    main article dl:nth-of-type(2) dd{
+        height: 250px;
+    }
+}
+
+.Click a{
+    color: #000;
+    background-image: url(../images/footer_fl_black.jpg) !important;
+}
+
+
+

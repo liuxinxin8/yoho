@@ -1,0 +1,355 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>首页</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/index_content_style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!--头部 start-->
+    <header class="navbar">
+        <ul class="o_h">
+            <li class="f_l w_15 menu_btn"><a href="#"><img src="images/list.png" alt=""/></a></li>
+            <li class="f_l w_70" ><input type="text" placeholder="3折起 折上2件8折"/></li>
+            <li class="f_r w_15"><a href="login.html"><img src="images/letter.png" alt=""/></a></li>
+        </ul>
+        <script>
+        $(document).ready(function(){
+            $(window).scroll(function() {
+                var top = $("#fenlei").offset().top; //获取指定位置
+                var scrollTop = $(window).scrollTop();  //获取当前滑动位置
+                if(scrollTop > top){                 //滑动到该位置时执行代码
+                    $(".navbar").addClass("active");
+                }else{
+                    $(".navbar").removeClass("active");
+                }
+            });
+        });
+    </script>
+    </header>
+
+    <!--侧边菜单 start-->
+
+    <div id="menu_smartphone" class="menu_mobile_app" align="left">
+        <nav id="menu" class="o_h">
+            <div class="menu_hd o_h">
+                <ul class="nav_list">
+                    <li class="men"><a href="#">MEN <span></span></a></li>
+                    <li class="women"><a href="#">WOMEN <span></span></a></li>
+                </ul>
+                <ul class="sub_list_men sub_list">
+                    <li><a href="#">限定发售 <span>LIMITED-men</span></a></li>
+                    <li><a href="#">潮流优选 <span>BLK-men</span></a></li>
+                    <li><a href="#">激价 <span>SALE-men</span></a></li>
+                    <li><a href="#">潮童 <span>KIDS-men</span></a></li>
+                    <li><a href="#">创意生活 <span>LIFE STYLE-men</span></a></li>
+                    <li><a href="#">YOHO!STORE</a></li>
+                </ul>
+                <ul class="sub_list_women sub_list">
+                    <li><a href="#">限定发售 <span>LIMITED-girl</span></a></li>
+                    <li><a href="#">潮流优选 <span>BLK-girl</span></a></li>
+                    <li><a href="#">激价 <span>SALE-girl</span></a></li>
+                    <li><a href="#">潮童 <span>KIDS-girl</span></a></li>
+                    <li><a href="#">创意生活 <span>LIFE STYLE-girl</span></a></li>
+                    <li><a href="#">YOHO!STORE</a></li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            $(function(){
+                $(".men").click(function(){
+                    $(".sub_list_men").slideDown(400);
+                    $(".sub_list_women").slideUp(400);
+                });
+                $(".women").click(function(){
+                    $(".sub_list_women").slideDown(400);
+                    $(".sub_list_men").slideUp(400);
+                });
+            })
+        </script>
+    </div>
+
+    <div id="grey_back">&nbsp;</div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var isMenuOpen = false;
+
+            $('.menu_btn').click(function () {
+                if (isMenuOpen == false) {
+                    $("#menu_smartphone").clearQueue().animate({
+                        left: '0px'
+                    })
+                    $("#grey_back").fadeIn('fast');
+                    $(this).fadeOut(200);
+                    $(".close").fadeIn(300);
+
+                    isMenuOpen = true;
+                }
+            });
+            $('#grey_back').click(function () {
+                if (isMenuOpen == true) {
+                    $("#menu_smartphone").clearQueue().animate({
+                        left: '-570px'
+                    })
+                    $("#page").clearQueue().animate({
+                        "margin-left": '0px'
+                    })
+                    $("#grey_back").fadeOut('fast');
+                    $(this).fadeOut(200);
+                    $(".menu_btn").fadeIn(300);
+
+                    isMenuOpen = false;
+                }
+            });
+        });
+    </script>
+
+    <!--正文 start-->
+    
+    <main>
+        <div class="Fixed">
+            <a href="sub_BLK.html"><img src="images/BLK.png" alt=""/></a>
+        </div>
+        <div id="banner">
+        <ul class="main_banner">
+            <li><a href="#"><img src="images/index/index_banner1.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/index/index_banner2.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/index/index_banner3.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/index/index_banner4.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/index/index_banner5.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/index/index_banner6.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/index/index_banner7.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/index/index_banner8.jpg" alt=""/></a></li>
+        </ul>
+        </div>
+        <script type="text/javascript">
+            jQuery("#banner").slide({mainCell:".main_banner",
+                effect:"leftLoop",interTime:1000,autoPlay:true});
+        </script>
+        <article id="fenlei">
+            <section class="main_yhfl">
+                <div class="main_fl">
+                    <a href="sub_rmph.html"><img src="images/index/index_xrfl.jpg" alt=""/></a>
+                </div>
+                <dl class="o_h">
+                    <dt><a href="sub_rmph.html"><img src="images/index/index_yhj1.jpg" alt=""/></a></dt>
+                    <dd><a href="sub_rmph.html"><img src="images/index/index_yhj2.jpg" alt=""/></a></dd>
+                    <dd><a href="sub_rmph.html"><img src="images/index/index_yhj3.jpg" alt=""/></a></dd>
+                    <dd><a href="sub_rmph.html"><img src="images/index/index_yhj4.jpg" alt=""/></a></dd>
+                    <dd><a href="sub_rmph.html"><img src="images/index/index_yhj5.jpg" alt=""/></a></dd>
+                </dl>
+            </section>
+            <section class="main_rmpl">
+                <dl class="o_h">
+                    <dt><a href="#">热门品类</a></dt>
+                    <dd><a href="#">t恤</a></dd>
+                    <dd><a href="#">衬衫</a></dd>
+                    <dd><a href="#">连衣裙</a></dd>
+                    <dd><a href="#">半身裙</a></dd>
+                    <dd><a href="#">休闲|运动鞋</a></dd>
+                    <dd><a href="#">凉鞋|凉拖</a></dd>
+                    <dd><a href="#">短裤</a></dd>
+                    <dd><a href="#">休闲裤</a></dd>
+                    <dd><a href="#">手链包|单肩包</a></dd>
+                    <dd><a href="#">手表</a></dd>
+                    <dd><a href="#">首饰</a></dd>
+                    <dd><a href="#">袜子</a></dd>
+                </dl>
+            </section>
+            <section class="main_rmph">
+                <ul>
+                    <li><a href="sub_rmph.html"><img src="images/index/index_adid.jpg" alt=""/></a></li>
+                    <li><a href="sub_rmph.html"><img src="images/index/index_nolo.jpg" alt=""/></a></li>
+                    <li><a href="sub_rmph.html"><img src="images/index/index_rmph.jpg" alt=""/></a></li>
+                </ul>
+            </section>
+            <section class="main_xpdz">
+                <div class="main_xpdz_tit">
+                    <a href="sub_rmph.html"><img src="images/index/index_xpdz.jpg" alt=""/></a>
+                </div>
+                <ul class="main_xpdz_bd o_h picMarquee">
+                    <li><a href="#">GUESS</a></li>
+                    <li><a href="#">MATERIAL</a></li>
+                    <li><a href="#">TYAKASHA</a></li>
+                    <li><a href="#">VANS</a></li>
+                    <li><a href="#">PUMA</a></li>
+                    <li><a href="#">TURN SIGNAL</a></li>
+                </ul>
+                <script type="text/javascript">
+                    jQuery(".main_xpdz").slide({mainCell:".main_xpdz_bd",
+                        autoPlay:true,effect:"leftMarquee",
+                        vis:3,interTime:20,pnLoop:false});
+                </script>
+            </section>
+            <section class="main_rqdp">
+                <div class="main_mrcd">
+                    <a href="sub_rmph.html"><img src="images/index/index_mrcd.jpg" alt=""/></a>
+                </div>
+                <div class="main_rqdp_tit">
+                    <a href="sub_rmph.html"><img src="images/index/index_rqdp.jpg" alt=""/></a>
+                </div>
+                <div class="main_rqdp_hd">
+                <ul class="main_rqdp_bd o_h picMarquee">
+                    <li><a href="#">converse</a></li>
+                    <li><a href="#">VANS</a></li>
+                    <li><a href="#">Wade</a></li>
+                    <li><a href="#">PUMA</a></li>
+                    <li><a href="#">Dickies</a></li>
+                    <li><a href="#">sxxxx3</a></li>
+                </ul>
+                </div>
+                <script type="text/javascript">
+                    jQuery(".main_rqdp").slide({mainCell:".main_rqdp_bd",
+                        autoPlay:true,effect:"leftMarquee",
+                        vis:3,interTime:20,pnLoop:false});
+                </script>
+            </section>
+            <section class="main_rmpp">
+                <dl class="o_h">
+                    <dt><a href="sub_rmph.html"><img src="images/index/index_rmpp1.jpg" alt=""/></a></dt>
+                    <dd><a href="sub_rmph.html"><img src="images/index/index_rmpp2.jpg" alt=""/></a></dd>
+                    <dd><a href="sub_rmph.html"><img src="images/index/index_rmpp3.jpg" alt=""/></a></dd>
+                </dl>
+            </section>
+            <section class="main_pphd o_h">
+                <div class="main_pphd_tit">
+                    <a href="sub_rmph.html"><img src="images/index/index_pphd.jpg" alt=""/></a>
+                </div>
+                <ul class="o_h main_pphd_bd">
+                    <li><a href="#"><img src="images/index/index_pphd_list1.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_pphd_list2.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_pphd_list3.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_pphd_list4.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_pphd_list5.jpg" alt=""/></a></li>
+                </ul>
+            </section>
+            <section class="main_pphd o_h">
+                <div class="main_pphd_tit">
+                    <a href="sub_rmph.html"><img src="images/index/index_fgg.jpg" alt=""/></a>
+                </div>
+                <ul class="o_h main_pphd_bd">
+                    <li><a href="#"><img src="images/index/index_fgg_list1.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_fgg_list2.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_fgg_list3.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_fgg_list4.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_fgg_list5.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_fgg_list6.jpg" alt=""/></a></li>
+                </ul>
+            </section>
+            <section class="main_pphd o_h">
+                <div class="main_pphd_tit">
+                    <a href="sub_rmph.html"><img src="images/index/index_mz.jpg" alt=""/></a>
+                </div>
+                <ul class="o_h main_pphd_bd">
+                    <li><a href="#"><img src="images/index/index_mz_list1.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_mz_list2.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_mz_list3.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_mz_list4.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_mz_list5.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_mz_list6.jpg" alt=""/></a></li>
+                </ul>
+            </section>
+            <section class="main_pphd o_h">
+                <div class="main_pphd_tit">
+                    <a href="sub_rmph.html"><img src="images/index/index_cysh.jpg" alt=""/></a>
+                </div>
+                <ul class="o_h main_pphd_bd">
+                    <li><a href="#"><img src="images/index/index_cysh_list1.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_cysh_list2.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_cysh_list3.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_cysh_list4.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_cysh_list5.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_cysh_list6.jpg" alt=""/></a></li>
+                </ul>
+            </section>
+            <section class="main_vip o_h">
+                <div class="main_vip_tit">
+                    <a href="sub_rmph.html"><img src="images/index/index_vip.jpg" alt=""/></a>
+                </div>
+                <ul class="main_vip_bd o_h">
+                    <li><a href="#">
+                        <img src="images/index/index_vip_list1.jpg" alt=""/>
+                        <h5>【YOHO!STORE发售...</h5>
+                        <P>8月发售</P>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/index/index_vip_list2.jpg" alt=""/>
+                        <h5>【YOHO!STORE发售...</h5>
+                        <P>8月发售</P>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/index/index_vip_list3.jpg" alt=""/>
+                        <h5>【YOHO!STORE发售...</h5>
+                        <P>8月发售</P>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/index/index_vip_list4.jpg" alt=""/>
+                        <h5>【YOHO!STORE发售...</h5>
+                        <P>8月发售</P>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/index/index_vip_list5.jpg" alt=""/>
+                        <h5>【YOHO!STORE发售...</h5>
+                        <P>8月发售</P>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/index/index_vip_list6.jpg" alt=""/>
+                        <h5>【YOHO!STORE发售...</h5>
+                        <P>8月发售</P>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/index/index_vip_list7.jpg" alt=""/>
+                        <h5>【YOHO!STORE发售...</h5>
+                        <P>8月发售</P>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/index/index_vip_list8.jpg" alt=""/>
+                        <h5>【YOHO!STORE发售...</h5>
+                        <P>8月发售</P>
+                    </a></li>
+                </ul>
+                <script type="text/javascript">
+                    jQuery(".main_vip").slide({mainCell:".main_vip_bd",
+                        autoPlay:true,effect:"leftMarquee",
+                        vis:3,interTime:20,pnLoop:false});
+                </script>
+            </section>
+            <section class="main_pphd o_h">
+                <div class="main_pphd_tit">
+                    <a href="sub_rmph.html"><img src="images/index/index_clyx.jpg" alt=""/></a>
+                </div>
+                <ul class="o_h main_pphd_bd">
+                    <li><a href="#"><img src="images/index/index_clyx_list1.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_clyx_list2.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_clyx_list3.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_clyx_list4.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_clyx_list5.jpg" alt=""/></a></li>
+                    <li><a href="#"><img src="images/index/index_clyx_list6.jpg" alt=""/></a></li>
+                </ul>
+                <script type="text/javascript">
+                    jQuery(".main_pphd").slide({mainCell:".main_pphd_bd",
+                        autoPlay:true,effect:"leftMarquee",
+                        vis:3,interTime:20,pnLoop:false});
+                </script>
+            </section>
+            <section class="main_zxj">
+                <a href="sub_rmph.html"><img src="images/index/index_zxj.jpg" alt=""/></a>
+            </section>
+        </article>
+    </main>
+<footer>
+    <ul class="o_h">
+        <li class="Click"><a href="index_content.html">首页</a></li>
+        <li><a href="sub_flpl.html">分类</a></li>
+        <li><a href="#">逛</a></li>
+        <li><a href="sub_shop.html">购物车</a></li>
+        <li><a href="#">我的</a></li>
+    </ul>
+</footer>
+</body>
+</html>

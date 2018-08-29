@@ -1,0 +1,105 @@
+header{
+    position: relative!important;
+    height: 200px;
+    background: url("../images/login/bg.jpg")no-repeat center;
+}
+header ul{
+    height: 200px;
+    padding:20px 10px;
+}
+header ul li img{
+    width: 30px;
+}
+header ul li:nth-of-type(2) a{
+    color: #FAF7F7;
+    font-size: 18px;
+    font-weight: 300;
+    border: 1px solid #995A65;
+    line-height: 30px;
+    height: 34px;
+    display: block;
+    border-radius: 20px;
+    padding: 0px 10px;
+}
+@media (min-width: 768px) {
+    header{
+        height: 310px;
+        background-size: 100%;
+    }
+    header ul{
+        height: 310px;
+    }
+    header ul li img{
+        width: 40px;
+        height: 40px;
+    }
+}
+/*-------------------------------------main------------------------------*/
+main{
+    padding: 40px 20px;
+}
+main form li{
+    padding-bottom: 15px;
+    position: relative;
+}
+main form li input{
+    width: 100%;
+    border: 0;
+    height: 50px;
+    border-bottom: 1px solid #c9c9c9;
+    font-size: 18px;
+    background-image: url(../images/login/phone.jpg);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size: 10%;
+    padding-left: 46px;
+}
+main form li:nth-of-type(2) input{
+    background-image: url(../images/login/yzm.jpg);
+    background-size: 7%;
+}
+@media (min-width: 768px) {
+    main form li input{
+        height: 50px;
+        background-size: 6%;
+    }
+    main form li:nth-of-type(2) input{
+        background-size: 4%;
+    }
+}
+main form li .yzm{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    background: #444444;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 15px;
+}
+main form li.Login input{
+    background: #B0B0B0;
+    color: #fff;
+    padding-left: 0;
+}
+main form .Login input:hover{
+    background: #6A0C1A;
+    color: #fff;
+    padding-left: 0;
+}
+main form li:last-child a{
+    color: #6C6C6C;
+}
+main .btn{
+    padding-top: 50px;
+}
+main .btn li{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+
+
+
+

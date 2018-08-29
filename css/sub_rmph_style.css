@@ -1,0 +1,97 @@
+/*---------------------header----------------------------*/
+header{
+    background: #000;
+    height: 50px;
+}
+header ul li{
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    padding-top:5px;
+}
+header ul li img{
+    width: 25px;
+    height: 25px;
+}
+@media (min-width: 412px) {
+    header{
+        height: 60px;
+    }
+    header ul li{
+        padding-top: 10px;
+    }
+    header ul li a{
+        height: 60px;
+    }
+}
+@media (min-width: 768px) {
+    header{
+        height: 80px;
+    }
+    header ul li{
+        line-height: 40px;
+        padding-top: 10px;
+    }
+    header ul li a{
+        height: 80px;
+    }
+    header ul li img{
+        width: 40px;
+        height: 40px;
+    }
+}
+/*------------------------内容--------------------------*/
+main{
+    padding-top: 50px;
+}
+main.banner{
+    width: 100%;
+}
+main .banner img{
+    width: 100%;
+}
+
+main article ul{
+    float: left;
+    width: 50%;
+    padding: 20px 10px;
+}
+main article li img{
+    width: 100%;
+}
+main article li:nth-of-type(2){
+    font-size: 12px;
+    color: #444444;
+}
+main article li a{
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #D0021B;
+    background: url("../images/shop/shop_bg.jpg")no-repeat right center;
+}
+
+@media (min-width: 412px) {
+    main article li:nth-of-type(2){
+        font-size: 16px;
+    }
+    main{
+        padding-top: 60px;
+    }
+    main article li a{
+        font-size: 14px;
+    }
+}
+@media (min-width: 768px) {
+    main{
+        padding-top: 80px;
+    }
+}
+
+
+
+
+
+
